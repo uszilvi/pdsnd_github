@@ -264,6 +264,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
 
+        #exclude Washington from age and gender user statistics
         if city == 'washington':
             user_stats_type(df)
             print("Age and gender information are not available for Washington.")
