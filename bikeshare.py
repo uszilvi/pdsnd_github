@@ -21,7 +21,7 @@ def get_filters():
     while True:
         city= input('Would you like to see data for Chicago, New York, or Washington?:\n').lower()
         if city not in ('chicago', 'new york', 'washington'):
-            print('Please correct your input.')
+            print('Please correct your input. Enter: Chicago, New York, or Washington')
             continue
         else:
             break
@@ -264,6 +264,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
 
+        #exclude Washington from age and gender user statistics
         if city == 'washington':
             user_stats_type(df)
             print("Age and gender information are not available for Washington.")
